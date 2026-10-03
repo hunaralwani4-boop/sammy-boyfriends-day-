@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Sammy Pie ♡</title>
+<meta name="theme-color" content="#f9b6d0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#fff3f8;color:#5b3145}
+body{font-family:'DM Sans',sans-serif;overflow-x:hidden}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative;overflow:hidden}
+.cover{
+  background:
+    radial-gradient(circle at 12% 15%,rgba(255,255,255,.9) 0 2px,transparent 3px),
+    radial-gradient(circle at 86% 22%,rgba(255,255,255,.9) 0 2px,transparent 3px),
+    linear-gradient(135deg,#ffd8e7,#f8b8d1 48%,#eac4f3);
+}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.42}
+.b1{width:180px;height:180px;background:#fff;top:-55px;left:-55px}
+.b2{width:240px;height:240px;background:#d9b7ff;right:-100px;bottom:-80px}
+.card{
+ width:min(440px,94vw);padding:20px 18px 24px;border-radius:34px;
+ background:rgba(255,255,255,.66);backdrop-filter:blur(12px);
+ border:1px solid rgba(255,255,255,.8);box-shadow:0 20px 60px rgba(120,54,91,.18);
+ text-align:center;position:relative;z-index:2
+}
+.polaroid{background:#fff;padding:10px 10px 30px;border-radius:7px;transform:rotate(-2deg);box-shadow:0 12px 28px rgba(80,30,60,.15);margin:0 auto 18px;width:82%}
+.polaroid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.script{font-family:'Caveat',cursive}
+h1{font:700 48px/1 'Caveat',cursive;margin:8px 0 2px;color:#9b315e}
+.sub{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#a66a83}
+.tap{margin:22px auto 0;border:0;border-radius:999px;padding:13px 22px;background:#9b315e;color:white;font-weight:600;box-shadow:0 9px 20px rgba(155,49,94,.25);cursor:pointer}
+.music-note{font-size:12px;margin-top:12px;color:#9a7182}
+.heart{position:absolute;font-size:22px;animation:float 4s ease-in-out infinite;opacity:.75}
+.h1{left:7%;top:14%}.h2{right:8%;top:11%;animation-delay:1s}.h3{left:12%;bottom:16%;animation-delay:2s}.h4{right:14%;bottom:19%;animation-delay:.5s}
+@keyframes float{50%{transform:translateY(-14px) rotate(8deg)}}
+.letterScreen{display:none;background:linear-gradient(160deg,#fff8fb,#f8eaff);align-items:flex-start;padding-top:42px}
+.letterWrap{width:min(700px,94vw);position:relative;z-index:2}
+.topline{text-align:center;color:#a34b72;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.letter{
+ margin-top:16px;background:#fffdfb;border-radius:8px;padding:30px 25px 34px;
+ box-shadow:0 20px 60px rgba(90,45,65,.14);position:relative;
+ background-image:linear-gradient(rgba(214,154,181,.08) 1px,transparent 1px);
+ background-size:100% 34px;
+}
+.tape{position:absolute;width:95px;height:25px;background:rgba(255,195,218,.65);top:-10px;left:50%;transform:translateX(-50%) rotate(-2deg)}
+.letter h2{font:700 42px/1 'Caveat',cursive;color:#a33d68;margin:0 0 14px}
+.letter p{font:500 19px/1.8 'Caveat',cursive;margin:0 0 12px;color:#63394b}
+.signature{text-align:right;font-size:24px;margin-top:18px}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.photos img{width:100%;height:240px;object-fit:cover;border-radius:14px;box-shadow:0 7px 18px rgba(80,30,60,.12)}
+.photos img:last-child{grid-column:1/-1;height:300px}
+.back{display:block;margin:20px auto 0;border:0;background:transparent;color:#9b315e;font-weight:600;cursor:pointer}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:4}
+.confetti span{position:absolute;top:-30px;animation:fall 5s linear infinite;font-size:18px}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media(max-width:500px){
+ h1{font-size:43px}.letter{padding:28px 19px}
+ .letter h2{font-size:38px}.letter p{font-size:18px}.photos img{height:190px}.photos img:last-child{height:245px}
+}
+</style>
+</head>
+<body>
+<section class="screen cover" id="cover">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="heart h1">♡</div><div class="heart h2">✦</div><div class="heart h3">♡</div><div class="heart h4">✿</div>
+  <div class="card">
+    <div class="polaroid"><img src="photo1.jpg" alt="A memory"></div>
+    <div class="sub">3 October · Boyfriend's Day</div>
+    <h1>heyyo sammy pie 😋💞</h1>
+    <div class="script" style="font-size:25px">a tiny little corner of the internet, just for you ♡</div>
+    <button class="tap" id="openBtn">tap to open 💌</button>
+    <div class="music-note">♫ add your own music file as <b>music.mp3</b> to play it here</div>
+  </div>
+</section>
+
+<section class="screen letterScreen" id="letterScreen">
+  <div class="letterWrap">
+    <div class="topline">for my favourite person ♡</div>
+    <article class="letter">
+      <div class="tape"></div>
+      <h2>Heyyo Sammy 😋💞</h2>
+      <div id="letterText"></div>
+      <div class="signature script">Happy Boyfriend's Day, Sammy Pie 🥰🙂‍↔️💕</div>
+    </article>
+    <div class="photos">
+      <img src="photo2.jpg" alt="Sammy">
+      <img src="photo3.jpg" alt="Sammy">
+      <img src="photo4.jpg" alt="Sammy">
+      <img src="photo5.jpg" alt="Sammy">
+    </div>
+    <button class="back" id="backBtn">↩ read it again</button>
+  </div>
+</section>
+
+<audio id="music" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="confetti" id="confetti"></div>
+
+<script>
+const lines = [
+"Thank you for coming into my life and making it a fairytale 😭💋",
+"The way we fight and phir tu mujhe kitna cutely manata hai 😘😋 — love it 😛",
+"I still remember that I called you Kabir and you side-eyed me so bad lol 😂🫶🏼",
+"Cheers to more memory building, growing together, and making a beautiful future of our own 🌟🥹",
+"I hope I get to watch you grow, chase the things you want, become everything you're meant to be — and be there cheering for you through all of it. 💗",
+"You are so, so special to me, Sammy. And today was just another excuse to remind you. 🥹🌷"
+];
+
+const textBox=document.getElementById('letterText');
+let timers=[];
+function typeLines(){
+  textBox.innerHTML='';
+  timers.forEach(clearTimeout); timers=[];
+  let delay=300;
+  lines.forEach((line,i)=>{
+    const p=document.createElement('p');
+    textBox.appendChild(p);
+    let j=0;
+    const t=setInterval(()=>{
+      p.textContent=line.slice(0,j++);
+      if(j>line.length) clearInterval(t);
+    },18);
+    timers.push(t);
+    delay+=line.length*18+450;
+  });
+}
+function sprinkle(){
+  const c=document.getElementById('confetti');
+  c.innerHTML='';
+  const icons=['♡','✦','🌸','💗','✿'];
+  for(let i=0;i<26;i++){
+    const s=document.createElement('span');
+    s.textContent=icons[Math.floor(Math.random()*icons.length)];
+    s.style.left=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*3)+'s';
+    s.style.animationDuration=(4+Math.random()*3)+'s';
+    c.appendChild(s);
+  }
+  setTimeout(()=>c.innerHTML='',8000);
+}
+document.getElementById('openBtn').onclick=()=>{
+  document.getElementById('cover').style.display='none';
+  document.getElementById('letterScreen').style.display='flex';
+  typeLines(); sprinkle();
+  const music=document.getElementById('music');
+  music.play().catch(()=>{});
+  window.scrollTo(0,0);
+};
+document.getElementById('backBtn').onclick=()=>{
+  document.getElementById('letterScreen').style.display='none';
+  document.getElementById('cover').style.display='flex';
+  window.scrollTo(0,0);
+};
+</script>
+</body>
+</html>
